@@ -12,15 +12,15 @@
 		00111BC4213FB6AE00AC0E1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BC3213FB6AE00AC0E1C /* main.m */; };
 		00111BCE213FB75400AC0E1C /* HCKDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BCA213FB75400AC0E1C /* HCKDataViewController.m */; };
 		00111BCF213FB75400AC0E1C /* HCKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BCD213FB75400AC0E1C /* HCKMainViewController.m */; };
-		00111BFC213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BF0213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.m */; };
-		00111BFD213FBABF00AC0E1C /* HCKBeaconConnectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BF2213FBABF00AC0E1C /* HCKBeaconConnectTimer.m */; };
-		00111BFE213FBABF00AC0E1C /* HCKBeaconDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BF4213FBABF00AC0E1C /* HCKBeaconDataParser.m */; };
-		00111BFF213FBABF00AC0E1C /* HCKBeaconParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BF6213FBABF00AC0E1C /* HCKBeaconParser.m */; };
-		00111C00213FBABF00AC0E1C /* HCKBeaconTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111BFB213FBABF00AC0E1C /* HCKBeaconTaskOperation.m */; };
 		00111C02213FBAC900AC0E1C /* mokoBeaconSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 00111C01213FBAC900AC0E1C /* mokoBeaconSDK.podspec */; };
-		00111C0B213FBC5C00AC0E1C /* HCKBeaconBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C05213FBC5C00AC0E1C /* HCKBeaconBaseModel.m */; };
-		00111C0C213FBC5C00AC0E1C /* HCKBeaconCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C07213FBC5C00AC0E1C /* HCKBeaconCentralManager.m */; };
-		00111C0D213FBC5C00AC0E1C /* HCKBeaconInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C09213FBC5C00AC0E1C /* HCKBeaconInterface.m */; };
+		00111C22213FC33500AC0E1C /* HCKBeaconInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C0E213FC33300AC0E1C /* HCKBeaconInterface.m */; };
+		00111C23213FC33500AC0E1C /* HCKBeaconCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C11213FC33300AC0E1C /* HCKBeaconCentralManager.m */; };
+		00111C24213FC33500AC0E1C /* HCKBeaconBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C12213FC33300AC0E1C /* HCKBeaconBaseModel.m */; };
+		00111C25213FC33500AC0E1C /* HCKBeaconParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C13213FC33300AC0E1C /* HCKBeaconParser.m */; };
+		00111C26213FC33500AC0E1C /* CBPeripheral+HCKCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C15213FC33400AC0E1C /* CBPeripheral+HCKCharacters.m */; };
+		00111C27213FC33500AC0E1C /* HCKBeaconConnectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C18213FC33400AC0E1C /* HCKBeaconConnectTimer.m */; };
+		00111C28213FC33500AC0E1C /* HCKBeaconDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C1D213FC33400AC0E1C /* HCKBeaconDataParser.m */; };
+		00111C29213FC33500AC0E1C /* HCKBeaconTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00111C1E213FC33400AC0E1C /* HCKBeaconTaskOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,28 +34,28 @@
 		00111BCB213FB75400AC0E1C /* HCKDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKDataViewController.h; sourceTree = "<group>"; };
 		00111BCC213FB75400AC0E1C /* HCKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKMainViewController.h; sourceTree = "<group>"; };
 		00111BCD213FB75400AC0E1C /* HCKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKMainViewController.m; sourceTree = "<group>"; };
-		00111BE1213FB75C00AC0E1C /* HCKBeaconSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconSDK.h; sourceTree = "<group>"; };
-		00111BEF213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+HCKCharacters.h"; sourceTree = "<group>"; };
-		00111BF0213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheral+HCKCharacters.m"; sourceTree = "<group>"; };
-		00111BF1213FBABF00AC0E1C /* HCKBeaconConnectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconConnectTimer.h; sourceTree = "<group>"; };
-		00111BF2213FBABF00AC0E1C /* HCKBeaconConnectTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconConnectTimer.m; sourceTree = "<group>"; };
-		00111BF3213FBABF00AC0E1C /* HCKBeaconDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconDataParser.h; sourceTree = "<group>"; };
-		00111BF4213FBABF00AC0E1C /* HCKBeaconDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconDataParser.m; sourceTree = "<group>"; };
-		00111BF5213FBABF00AC0E1C /* HCKBeaconParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconParser.h; sourceTree = "<group>"; };
-		00111BF6213FBABF00AC0E1C /* HCKBeaconParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconParser.m; sourceTree = "<group>"; };
-		00111BF7213FBABF00AC0E1C /* HCKBeaconRegularsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconRegularsDefine.h; sourceTree = "<group>"; };
-		00111BF8213FBABF00AC0E1C /* HCKBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconService.h; sourceTree = "<group>"; };
-		00111BF9213FBABF00AC0E1C /* HCKBeaconTaskIDDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconTaskIDDefines.h; sourceTree = "<group>"; };
-		00111BFA213FBABF00AC0E1C /* HCKBeaconTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconTaskOperation.h; sourceTree = "<group>"; };
-		00111BFB213FBABF00AC0E1C /* HCKBeaconTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconTaskOperation.m; sourceTree = "<group>"; };
 		00111C01213FBAC900AC0E1C /* mokoBeaconSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mokoBeaconSDK.podspec; sourceTree = "<group>"; };
-		00111C04213FBC5C00AC0E1C /* HCKBeaconBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconBaseModel.h; sourceTree = "<group>"; };
-		00111C05213FBC5C00AC0E1C /* HCKBeaconBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconBaseModel.m; sourceTree = "<group>"; };
-		00111C06213FBC5C00AC0E1C /* HCKBeaconCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconCentralManager.h; sourceTree = "<group>"; };
-		00111C07213FBC5C00AC0E1C /* HCKBeaconCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconCentralManager.m; sourceTree = "<group>"; };
-		00111C08213FBC5C00AC0E1C /* HCKBeaconInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconInterface.h; sourceTree = "<group>"; };
-		00111C09213FBC5C00AC0E1C /* HCKBeaconInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconInterface.m; sourceTree = "<group>"; };
-		00111C0A213FBC5C00AC0E1C /* HCKBeaconProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconProtocol.h; sourceTree = "<group>"; };
+		00111C0E213FC33300AC0E1C /* HCKBeaconInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconInterface.m; sourceTree = "<group>"; };
+		00111C0F213FC33300AC0E1C /* HCKBeaconBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconBaseModel.h; sourceTree = "<group>"; };
+		00111C10213FC33300AC0E1C /* HCKBeaconConnectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconConnectTimer.h; sourceTree = "<group>"; };
+		00111C11213FC33300AC0E1C /* HCKBeaconCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconCentralManager.m; sourceTree = "<group>"; };
+		00111C12213FC33300AC0E1C /* HCKBeaconBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconBaseModel.m; sourceTree = "<group>"; };
+		00111C13213FC33300AC0E1C /* HCKBeaconParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconParser.m; sourceTree = "<group>"; };
+		00111C14213FC33400AC0E1C /* HCKBeaconDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconDataParser.h; sourceTree = "<group>"; };
+		00111C15213FC33400AC0E1C /* CBPeripheral+HCKCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheral+HCKCharacters.m"; sourceTree = "<group>"; };
+		00111C16213FC33400AC0E1C /* HCKBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconService.h; sourceTree = "<group>"; };
+		00111C17213FC33400AC0E1C /* HCKBeaconRegularsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconRegularsDefine.h; sourceTree = "<group>"; };
+		00111C18213FC33400AC0E1C /* HCKBeaconConnectTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconConnectTimer.m; sourceTree = "<group>"; };
+		00111C19213FC33400AC0E1C /* HCKBeaconTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconTaskOperation.h; sourceTree = "<group>"; };
+		00111C1A213FC33400AC0E1C /* HCKBeaconParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconParser.h; sourceTree = "<group>"; };
+		00111C1B213FC33400AC0E1C /* HCKBeaconProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconProtocol.h; sourceTree = "<group>"; };
+		00111C1C213FC33400AC0E1C /* HCKBeaconTaskIDDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconTaskIDDefines.h; sourceTree = "<group>"; };
+		00111C1D213FC33400AC0E1C /* HCKBeaconDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconDataParser.m; sourceTree = "<group>"; };
+		00111C1E213FC33400AC0E1C /* HCKBeaconTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCKBeaconTaskOperation.m; sourceTree = "<group>"; };
+		00111C1F213FC33400AC0E1C /* HCKBeaconCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconCentralManager.h; sourceTree = "<group>"; };
+		00111C20213FC33500AC0E1C /* HCKBeaconInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconInterface.h; sourceTree = "<group>"; };
+		00111C21213FC33500AC0E1C /* CBPeripheral+HCKCharacters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+HCKCharacters.h"; sourceTree = "<group>"; };
+		00111C2A213FC33B00AC0E1C /* HCKBeaconSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCKBeaconSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,45 +106,29 @@
 		00111BD0213FB75C00AC0E1C /* mokoBeaconSDK */ = {
 			isa = PBXGroup;
 			children = (
-				00111C03213FBC5C00AC0E1C /* public */,
-				00111BEE213FBABF00AC0E1C /* private */,
-				00111BE1213FB75C00AC0E1C /* HCKBeaconSDK.h */,
+				00111C2A213FC33B00AC0E1C /* HCKBeaconSDK.h */,
+				00111C21213FC33500AC0E1C /* CBPeripheral+HCKCharacters.h */,
+				00111C15213FC33400AC0E1C /* CBPeripheral+HCKCharacters.m */,
+				00111C0F213FC33300AC0E1C /* HCKBeaconBaseModel.h */,
+				00111C12213FC33300AC0E1C /* HCKBeaconBaseModel.m */,
+				00111C1F213FC33400AC0E1C /* HCKBeaconCentralManager.h */,
+				00111C11213FC33300AC0E1C /* HCKBeaconCentralManager.m */,
+				00111C10213FC33300AC0E1C /* HCKBeaconConnectTimer.h */,
+				00111C18213FC33400AC0E1C /* HCKBeaconConnectTimer.m */,
+				00111C14213FC33400AC0E1C /* HCKBeaconDataParser.h */,
+				00111C1D213FC33400AC0E1C /* HCKBeaconDataParser.m */,
+				00111C20213FC33500AC0E1C /* HCKBeaconInterface.h */,
+				00111C0E213FC33300AC0E1C /* HCKBeaconInterface.m */,
+				00111C1A213FC33400AC0E1C /* HCKBeaconParser.h */,
+				00111C13213FC33300AC0E1C /* HCKBeaconParser.m */,
+				00111C1B213FC33400AC0E1C /* HCKBeaconProtocol.h */,
+				00111C17213FC33400AC0E1C /* HCKBeaconRegularsDefine.h */,
+				00111C16213FC33400AC0E1C /* HCKBeaconService.h */,
+				00111C1C213FC33400AC0E1C /* HCKBeaconTaskIDDefines.h */,
+				00111C19213FC33400AC0E1C /* HCKBeaconTaskOperation.h */,
+				00111C1E213FC33400AC0E1C /* HCKBeaconTaskOperation.m */,
 			);
 			path = mokoBeaconSDK;
-			sourceTree = "<group>";
-		};
-		00111BEE213FBABF00AC0E1C /* private */ = {
-			isa = PBXGroup;
-			children = (
-				00111BEF213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.h */,
-				00111BF0213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.m */,
-				00111BF1213FBABF00AC0E1C /* HCKBeaconConnectTimer.h */,
-				00111BF2213FBABF00AC0E1C /* HCKBeaconConnectTimer.m */,
-				00111BF3213FBABF00AC0E1C /* HCKBeaconDataParser.h */,
-				00111BF4213FBABF00AC0E1C /* HCKBeaconDataParser.m */,
-				00111BF5213FBABF00AC0E1C /* HCKBeaconParser.h */,
-				00111BF6213FBABF00AC0E1C /* HCKBeaconParser.m */,
-				00111BF7213FBABF00AC0E1C /* HCKBeaconRegularsDefine.h */,
-				00111BF8213FBABF00AC0E1C /* HCKBeaconService.h */,
-				00111BF9213FBABF00AC0E1C /* HCKBeaconTaskIDDefines.h */,
-				00111BFA213FBABF00AC0E1C /* HCKBeaconTaskOperation.h */,
-				00111BFB213FBABF00AC0E1C /* HCKBeaconTaskOperation.m */,
-			);
-			path = private;
-			sourceTree = "<group>";
-		};
-		00111C03213FBC5C00AC0E1C /* public */ = {
-			isa = PBXGroup;
-			children = (
-				00111C04213FBC5C00AC0E1C /* HCKBeaconBaseModel.h */,
-				00111C05213FBC5C00AC0E1C /* HCKBeaconBaseModel.m */,
-				00111C06213FBC5C00AC0E1C /* HCKBeaconCentralManager.h */,
-				00111C07213FBC5C00AC0E1C /* HCKBeaconCentralManager.m */,
-				00111C08213FBC5C00AC0E1C /* HCKBeaconInterface.h */,
-				00111C09213FBC5C00AC0E1C /* HCKBeaconInterface.m */,
-				00111C0A213FBC5C00AC0E1C /* HCKBeaconProtocol.h */,
-			);
-			path = public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,18 +201,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00111C28213FC33500AC0E1C /* HCKBeaconDataParser.m in Sources */,
+				00111C24213FC33500AC0E1C /* HCKBeaconBaseModel.m in Sources */,
 				00111BCF213FB75400AC0E1C /* HCKMainViewController.m in Sources */,
-				00111BFC213FBABF00AC0E1C /* CBPeripheral+HCKCharacters.m in Sources */,
+				00111C22213FC33500AC0E1C /* HCKBeaconInterface.m in Sources */,
 				00111BCE213FB75400AC0E1C /* HCKDataViewController.m in Sources */,
-				00111BFE213FBABF00AC0E1C /* HCKBeaconDataParser.m in Sources */,
 				00111BC4213FB6AE00AC0E1C /* main.m in Sources */,
-				00111C0B213FBC5C00AC0E1C /* HCKBeaconBaseModel.m in Sources */,
-				00111C0D213FBC5C00AC0E1C /* HCKBeaconInterface.m in Sources */,
-				00111C0C213FBC5C00AC0E1C /* HCKBeaconCentralManager.m in Sources */,
-				00111BFD213FBABF00AC0E1C /* HCKBeaconConnectTimer.m in Sources */,
-				00111BFF213FBABF00AC0E1C /* HCKBeaconParser.m in Sources */,
-				00111C00213FBABF00AC0E1C /* HCKBeaconTaskOperation.m in Sources */,
+				00111C27213FC33500AC0E1C /* HCKBeaconConnectTimer.m in Sources */,
+				00111C23213FC33500AC0E1C /* HCKBeaconCentralManager.m in Sources */,
+				00111C26213FC33500AC0E1C /* CBPeripheral+HCKCharacters.m in Sources */,
+				00111C29213FC33500AC0E1C /* HCKBeaconTaskOperation.m in Sources */,
 				00111BB6213FB6AE00AC0E1C /* AppDelegate.m in Sources */,
+				00111C25213FC33500AC0E1C /* HCKBeaconParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

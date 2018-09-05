@@ -12,17 +12,6 @@ Pod::Spec.new do |s|
   	s.source       = { :git => "git@github.com:MokoBeacon/mokoBeacon-iOS.git", :tag => "#{s.version}" }         #存储库的git地址，以及tag值
   	s.requires_arc = true #是否支持ARC
 
-  	s.source_files = 'mokoBeaconSDK/HCKBeaconSDK.h'
-
-# ――― subspec ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  	s.subspec 'private' do |ss|
-    		ss.source_files = 'mokoBeaconSDK/private/**'
-  	end
-
-    s.subspec 'public' do |ss|
-            ss.source_files = 'mokoBeaconSDK/public/**'
-            ss.dependency "mokoBeaconSDK/private"
-    end
+  	s.source_files = 'mokoBeaconSDK/**'
 
 end
