@@ -169,6 +169,15 @@ NSString * const HCKCustomErrorDomain = @"com.moko.iBeaconBluetoothSDK";
     return [pred evaluateWithObject:content];
 }
 
++ (BOOL)asciiString:(NSString *)content {
+    NSInteger strlen = content.length;
+    NSInteger datalen = [[content dataUsingEncoding:NSUTF8StringEncoding] length];
+    if (strlen != datalen) {
+        return NO;
+    }
+    return YES;
+}
+
 + (BOOL)isUUIDString:(NSString *)uuid{
     if (!HCKBeaconValidStr(uuid)) {
         return NO;

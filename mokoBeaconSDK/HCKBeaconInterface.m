@@ -303,14 +303,14 @@
 /**
  设置校验距离，特征UUID为FF04
 
- @param measurePower -119dBm ~ 0dBm
+ @param measurePower -120dBm ~ 0dBm
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
 + (void)setBeaconMeasurePower:(NSInteger)measurePower
                      sucBlock:(void (^)(id returnData))sucBlock
                   failedBlock:(void (^)(NSError *error))failedBlock{
-    if (measurePower < -119 || measurePower > 0) {
+    if (measurePower < -120 || measurePower > 0) {
         [HCKBeaconParser operationParametersErrorBlock:failedBlock];
         return;
     }
@@ -344,14 +344,14 @@
 /**
  设置密码，特征UUID为FF06.beacon返回00(非连接状态，连接成功)、01(密码错误)、02(修改密码成功，只有连接状态下才能修改密码)三种状态
  
- @param password 必须是8个字符,数字或者字母
+ @param password 必须是8个字符
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
 + (void)setBeaconPassword:(NSString *)password
                  sucBlock:(void (^)(id returnData))sucBlock
               failedBlock:(void (^)(NSError *error))failedBlock{
-    if (![HCKBeaconParser isPassword:password]) {
+    if (!password || password.length != 8 || ![HCKBeaconParser asciiString:password]) {
         [HCKBeaconParser operationParametersErrorBlock:failedBlock];
         return;
     }
@@ -426,14 +426,14 @@
 /**
  设置beacon的名字，特征UUID为FF09
 
- @param beaconName beacon的名字,字符串，通用不带三轴数据的最大长度为10个，带三轴数据的最大长度为4个,字母数字下划线其中的一种
+ @param beaconName beacon的名字,字符串，通用不带三轴数据的最大长度为10个，带三轴数据的最大长度为4个
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
 + (void)setBeaconName:(NSString *)beaconName
              sucBlock:(void (^)(id returnData))sucBlock
           failedBlock:(void (^)(NSError *error))failedBlock{
-    if (!HCKBeaconValidStr(beaconName)) {
+    if (!HCKBeaconValidStr(beaconName) || ![HCKBeaconParser asciiString:beaconName]) {
         [HCKBeaconParser operationParametersErrorBlock:failedBlock];
         return;
     }
@@ -447,10 +447,10 @@
         [HCKBeaconParser operationParametersErrorBlock:failedBlock];
         return;
     }
-    if (![HCKBeaconParser isBeaconName:beaconName]) {
-        [HCKBeaconParser operationParametersErrorBlock:failedBlock];
-        return;
-    }
+//    if (![HCKBeaconParser isBeaconName:beaconName]) {
+//        [HCKBeaconParser operationParametersErrorBlock:failedBlock];
+//        return;
+//    }
     NSString *commandString = @"";
     for (NSInteger i = 0; i < beaconName.length; i ++) {
         int asciiCode = [beaconName characterAtIndex:i];
@@ -479,6 +479,39 @@
                  commandString:commandString
                       sucBlock:sucBlock
                    failedBlock:failedBlock];
+}
+
+/**
+ 关机
+
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
+ */
++ (void)powerOffDeviceWithSucBlock:(void (^)(id returnData))sucBlock
+                       failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ea6d000100";
+    [self addTaskWithHeartBeat:HCKBeaconSetBeaconPowerOffOperation
+                characteristic:[HCKBeaconCentralManager sharedInstance].peripheral.elapsedTime
+                 commandString:commandString
+                      sucBlock:^(id returnData) {
+                          BOOL success = [returnData[@"result"][@"powerOffSuccess"] boolValue];
+                          if (success) {
+                              if (sucBlock) {
+                                  NSDictionary *result = @{@"msg":@"success",
+                                                           @"code":@"1",
+                                                           @"result":@{},
+                                                           };
+                                  sucBlock(result);
+                              }
+                              return ;
+                          }
+                          NSError *error = [[NSError alloc] initWithDomain:@"com.moko.iBeaconBluetoothSDK"
+                                                                      code:-999
+                                                                  userInfo:@{@"errorInfo":@"Power off error!"}];
+                          if (failedBlock) {
+                              failedBlock(error);
+                          }
+                      } failedBlock:failedBlock];
 }
 
 #pragma mark - 电池服务180F,全部只读

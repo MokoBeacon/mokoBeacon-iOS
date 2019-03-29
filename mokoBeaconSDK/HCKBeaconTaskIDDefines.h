@@ -38,4 +38,5 @@ typedef NS_ENUM(NSInteger, HCKBeaconTaskOperationID) {
     HCKBeaconSetBeaconDeviceIDOperation,    //设置device id
     HCKBeaconSetBeaconNameOperation,        //设置iBeacon的名字
     HCKBeaconSetBeaconConnectModeOperation, //设置iBeacon的可连接状态
+    HCKBeaconSetBeaconPowerOffOperation,    //关机
 };

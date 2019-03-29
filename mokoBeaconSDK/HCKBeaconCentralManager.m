@@ -283,10 +283,12 @@ static dispatch_once_t onceToken;
     }
     self.isConnecting = YES;
     if (self.centralManager.state != CBCentralManagerStatePoweredOn) {
+        self.isConnecting = NO;
         [HCKBeaconParser operationCentralBlePowerOffErrorBlock:failBlock];
         return;
     }
-    if (!device || ![HCKBeaconParser isPassword:password]) {
+    if (!device || ![HCKBeaconParser asciiString:password]) {
+        self.isConnecting = NO;
         [HCKBeaconParser operationParametersErrorBlock:failBlock];
         return;
     }
@@ -295,32 +297,23 @@ static dispatch_once_t onceToken;
         [self.peripheral setNil];
         [self.operationQueue cancelAllOperations];
     }
-    self.peripheral = nil;
-    self.connectSucBlock = nil;
-    self.connectSucBlock = sucBlock;
-    self.connectFailBlock = nil;
-    self.connectFailBlock = failBlock;
     self.deviceType = deviceType;
     self.password = nil;
     self.password = password;
-    [self.centralManager stopScan];
-    self.managerAction = currentManagerActionConnectPeripheral;
-    self.connectStatus = HCKBeaconConnectStatusConnecting;
-    if (self.connectTimer) {
-        [self.connectTimer cancel];
-    }
-    self.connectTimer = nil;
-    self.connectTimeout = NO;
-    HCKBeaconWS(weakSelf);
-    HCKBeaconConnectTimer *timer = [[HCKBeaconConnectTimer alloc] initWithTimeout:defaultConnectTime timeoutCallback:^{
-        weakSelf.connectTimeout = YES;
-        [weakSelf connectPeripheralFailed:NO];
+    __weak typeof(self) weakSelf = self;
+    [self connectDevice:device sucBlock:^(CBPeripheral *peripheral) {
+        if (sucBlock) {
+            sucBlock(peripheral);
+        }
+        weakSelf.connectSucBlock = nil;
+        weakSelf.connectFailBlock = nil;
+    } failedBlock:^(NSError *error) {
+        if (failBlock) {
+            failBlock(error);
+        }
+        weakSelf.connectSucBlock = nil;
+        weakSelf.connectFailBlock = nil;
     }];
-    self.connectTimer = timer;
-    [self.centralManager stopScan];
-    [self updatePeripheralConnectState:HCKBeaconConnectStatusConnecting];
-    [self.centralManager connectPeripheral:device options:@{}];
-    [self.connectTimer resume];
 }
 
 /**
@@ -408,6 +401,33 @@ static dispatch_once_t onceToken;
 }
 
 #pragma mark - connect result method
+- (void)connectDevice:(CBPeripheral *)device sucBlock:(void (^)(CBPeripheral *peripheral))sucBlock failedBlock:(void (^)(NSError *error))failedBlock {
+    self.peripheral = nil;
+    self.peripheral = device;
+    self.connectSucBlock = nil;
+    self.connectSucBlock = sucBlock;
+    self.connectFailBlock = nil;
+    self.connectFailBlock = failedBlock;
+    [self.centralManager stopScan];
+    self.managerAction = currentManagerActionConnectPeripheral;
+    self.connectStatus = HCKBeaconConnectStatusConnecting;
+    if (self.connectTimer) {
+        [self.connectTimer cancel];
+    }
+    self.connectTimer = nil;
+    self.connectTimeout = NO;
+    HCKBeaconWS(weakSelf);
+    HCKBeaconConnectTimer *timer = [[HCKBeaconConnectTimer alloc] initWithTimeout:defaultConnectTime timeoutCallback:^{
+        weakSelf.connectTimeout = YES;
+        [weakSelf connectPeripheralFailed:NO];
+    }];
+    self.connectTimer = timer;
+    [self.centralManager stopScan];
+    [self updatePeripheralConnectState:HCKBeaconConnectStatusConnecting];
+    [self.centralManager connectPeripheral:device options:@{}];
+    [self.connectTimer resume];
+}
+
 - (void)resetOriSettings{
     if (self.connectTimer) {
         [self.connectTimer cancel];
@@ -602,7 +622,7 @@ static dispatch_once_t onceToken;
 - (void)connectDeviceWithPassword:(NSString *)password
                          sucBlock:(void (^)(void))sucBlock
                       failedBlock:(void (^)(NSError *error))failedBlock{
-    if (![HCKBeaconParser isPassword:password]) {
+    if (![HCKBeaconParser asciiString:password]) {
         [HCKBeaconParser operationParametersErrorBlock:failedBlock];
         return;
     }

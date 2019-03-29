@@ -23,6 +23,8 @@ static NSString *const mainCellIdenty = @"mainCellIdenty";
 
 @property (nonatomic, strong)UIImageView *imageView;
 
+@property (nonatomic, strong)UIActivityIndicatorView *indicatorView;
+
 @end
 
 @implementation HCKMainViewController
@@ -33,6 +35,7 @@ static NSString *const mainCellIdenty = @"mainCellIdenty";
     [self.navigationItem setTitle:@"测试"];
     [self.view addSubview:self.button];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.indicatorView];
     [HCKBeaconCentralManager sharedInstance].scanDelegate = self;
     [self.view addSubview:self.imageView];
 }
@@ -85,12 +88,15 @@ static NSString *const mainCellIdenty = @"mainCellIdenty";
 }
 
 - (void)didSelectedRow:(NSInteger)row{
+    [self.indicatorView startAnimating];
     HCKBeaconBaseModel *model = self.dataList[row];
     HCKBeaconWS(weakSelf);
     [[HCKBeaconCentralManager sharedInstance] connectDevice:model.peripheral deviceType:model.deviceType password:@"Moko4321" connectSucBlock:^(CBPeripheral *peripheral) {
+        [self.indicatorView stopAnimating];
         HCKDataViewController *vc = [[HCKDataViewController alloc] init];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     } connectFailedBlock:^(NSError *error) {
+        [self.indicatorView stopAnimating];
         [weakSelf showAlertWithMsg:error.userInfo[@"errorInfo"]];
     }];
 }
@@ -153,6 +159,15 @@ static NSString *const mainCellIdenty = @"mainCellIdenty";
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, self.view.frame.size.height - 40.f, 40, 40)];
     }
     return _imageView;
+}
+
+- (UIActivityIndicatorView *)indicatorView {
+    if (!_indicatorView) {
+        _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2, 50, 50)];
+        _indicatorView.hidesWhenStopped = YES;
+        _indicatorView.color = [UIColor blueColor];
+    }
+    return _indicatorView;
 }
 
 @end

@@ -47,6 +47,7 @@ extern NSString * const HCKCustomErrorDomain;
 + (BOOL)realNumbers:(NSString *)content;
 + (BOOL)isUUIDString:(NSString *)uuid;
 + (BOOL)isBeaconName:(NSString *)content;
++ (BOOL)asciiString:(NSString *)content;
 + (BOOL)getiBeaconConnectable:(NSString *)content;
 + (NSString *)calcDistByRSSI:(int)rssi measurePower:(NSInteger)measurePower;
 + (NSString *)getHexStringWithLength:(NSInteger)len origString:(NSString *)oriString;

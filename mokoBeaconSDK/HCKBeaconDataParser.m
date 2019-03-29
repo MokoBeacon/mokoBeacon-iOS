@@ -317,6 +317,10 @@ NSString *const HCKBeaconCommunicationDataNum = @"HCKBeaconCommunicationDataNum"
             returnData = @{};
             operationID = HCKBeaconStopReadXYZDataOperation;
         }
+    }else if ([function isEqualToString:@"6d"]) {
+        NSString *string = [content substringFromIndex:(content.length - 2)];
+        operationID = HCKBeaconSetBeaconPowerOffOperation;
+        returnData = @{@"powerOffSuccess" : @([string isEqualToString:@"aa"])};
     }
     return [self dataParserGetDataSuccess:returnData operationID:operationID];
 }

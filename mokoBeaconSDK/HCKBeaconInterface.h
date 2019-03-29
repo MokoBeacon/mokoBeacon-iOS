@@ -173,7 +173,7 @@ typedef NS_ENUM(NSInteger, beaconTransmission) {
 /**
  设置校验距离，特征UUID为FF04
  
- @param measurePower -119dBm ~ 0dBm
+ @param measurePower -120dBm ~ 0dBm
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
@@ -193,7 +193,7 @@ typedef NS_ENUM(NSInteger, beaconTransmission) {
 /**
  设置密码，特征UUID为FF06.beacon返回00(非连接状态，连接成功)、01(密码错误)、02(修改密码成功，只有连接状态下才能修改密码)三种状态
  
- @param password 必须是8个字符,数字或者字母
+ @param password 必须是8个字符
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
@@ -223,7 +223,7 @@ typedef NS_ENUM(NSInteger, beaconTransmission) {
 /**
  设置beacon的名字，特征UUID为FF09
  
- @param beaconName beacon的名字,字符串，通用不带三轴数据的最大长度为10个，带三轴数据的最大长度为4个,字母数字下划线其中的一种
+ @param beaconName beacon的名字,字符串，通用不带三轴数据的最大长度为10个，带三轴数据的最大长度为4个
  @param sucBlock 成功回调
  @param failedBlock 失败回调
  */
@@ -240,6 +240,14 @@ typedef NS_ENUM(NSInteger, beaconTransmission) {
 + (void)setBeaconConnectStatus:(BOOL)connectEnable
                       sucBlock:(void (^)(id returnData))sucBlock
                    failedBlock:(void (^)(NSError *error))failedBlock;
+/**
+ 关机
+ 
+ @param sucBlock 成功回调
+ @param failedBlock 失败回调
+ */
++ (void)powerOffDeviceWithSucBlock:(void (^)(id returnData))sucBlock
+                       failedBlock:(void (^)(NSError *error))failedBlock;
 #pragma mark - 电池服务180F,全部只读
 /**
  获取iBeacon的电量
