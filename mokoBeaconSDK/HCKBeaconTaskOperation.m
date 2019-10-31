@@ -39,11 +39,6 @@ NSString *const HCKBeaconDataStatusLev = @"HCKBeaconDataStatusLev";
 @property (nonatomic, assign)NSInteger respondNumber;
 
 /**
- 是否结束当前线程的标志
- */
-@property (nonatomic, assign)BOOL complete;
-
-/**
  线程结束时候的回调
  */
 @property (nonatomic, copy)communicationCompleteBlock completeBlock;
@@ -180,9 +175,6 @@ NSString *const HCKBeaconDataStatusLev = @"HCKBeaconDataStatusLev";
         });
         //如果需要从外设拿总条数，则在拿到总条数之后，开启接受超时定时器
         dispatch_resume(self.numTaskTimer);
-        do {
-            [[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];
-        }while (NO == _complete);
         return;
     }
     //如果不需要重新获取条数，直接开启接受超时
@@ -217,9 +209,6 @@ NSString *const HCKBeaconDataStatusLev = @"HCKBeaconDataStatusLev";
     if (!setRunloopLifeCircle) {
         return;
     }
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];
-    }while (NO == _complete);
 }
 
 - (void)finishOperation{
@@ -229,7 +218,6 @@ NSString *const HCKBeaconDataStatusLev = @"HCKBeaconDataStatusLev";
     [self willChangeValueForKey:@"isFinished"];
     _finished = YES;
     [self didChangeValueForKey:@"isFinished"];
-    self.complete = YES;
 }
 
 - (void)communicationTimeout{
@@ -256,7 +244,7 @@ NSString *const HCKBeaconDataStatusLev = @"HCKBeaconDataStatusLev";
             return;
         }
         NSError *error = [HCKBeaconParser getErrorWithCode:HCKBeaconCommunicationTimeout
-                                                         message:@"Communication timeout"];
+                                                   message:@"Communication timeout"];
         self.completeBlock(error, self.operationID, nil);
     }
 }

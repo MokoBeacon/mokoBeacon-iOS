@@ -18,10 +18,7 @@
         NSAssert1(!(advertiseData.length != 7), @"Invalid advertiseData:%@", advertiseData);
         self.deviceType = HCKBeaconDeviceTypeNormal;
         self.rssi = [NSString stringWithFormat:@"%ld",(long)[additionalDic[@"rssi"] integerValue]];
-        NSString *temp = advertiseData.description;
-        temp = [temp stringByReplacingOccurrencesOfString:@" " withString:@""];
-        temp = [temp stringByReplacingOccurrencesOfString:@"<" withString:@""];
-        temp = [temp stringByReplacingOccurrencesOfString:@">" withString:@""];
+        NSString *temp = [HCKBeaconParser hexStringFromData:advertiseData];
         self.battery = [HCKBeaconParser getDecimalStringWithHex:temp range:NSMakeRange(0, 2)];
         self.major = [HCKBeaconParser getDecimalStringWithHex:temp range:NSMakeRange(2, 4)];
         self.minor = [HCKBeaconParser getDecimalStringWithHex:temp range:NSMakeRange(6, 4)];
@@ -52,10 +49,7 @@
     if (self) {
         NSAssert1(!(advertiseData.length != 13), @"Invalid advertiseData:%@", advertiseData);
         self.deviceType = HCKBeaconDeviceTypeWithXYZData;
-        NSString *temp = advertiseData.description;
-        temp = [temp stringByReplacingOccurrencesOfString:@" " withString:@""];
-        temp = [temp stringByReplacingOccurrencesOfString:@"<" withString:@""];
-        temp = [temp stringByReplacingOccurrencesOfString:@">" withString:@""];
+        NSString *temp = [HCKBeaconParser hexStringFromData:advertiseData];
         self.xData = [temp substringWithRange:NSMakeRange(14, 4)];
         self.yData = [temp substringWithRange:NSMakeRange(18, 4)];
         self.zData = [temp substringWithRange:NSMakeRange(22, 4)];
