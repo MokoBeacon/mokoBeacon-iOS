@@ -23,6 +23,18 @@ static NSTimeInterval const defaultConnectTime = 20.f;
 static HCKBeaconCentralManager *manager = nil;
 static dispatch_once_t onceToken;
 
+@interface NSObject (mokoBeaconSDK)
+
+@end
+
+@implementation NSObject (mokoBeaconSDK)
+
++ (void)load{
+    [HCKBeaconCentralManager sharedInstance];
+}
+
+@end
+
 @interface HCKBeaconCentralManager()<CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong)CBCentralManager *centralManager;

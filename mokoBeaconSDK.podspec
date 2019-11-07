@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   	s.name         = "mokoBeaconSDK"    #存储库名称
-  	s.version      = "1.0.0"      #版本号，与tag值一致
+  	s.version      = "1.0.1"      #版本号，与tag值一致
   	s.summary      = "iBeacon"  #简介
   	s.description  = "moko iBeacon SDK"  #描述
   	s.homepage     = "https://github.com/MokoBeacon/mokoBeacon-iOS"      #项目主页，不是git地址
