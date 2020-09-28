@@ -1,3 +1,0 @@
-mokoBeaconSDK
-#import "HCKBeaconSDK.h"
-
