@@ -1,0 +1,16 @@
+use_frameworks!
+
+platform :ios, '12.0'
+
+target 'MKBeaconSDK_Example' do
+  pod 'MKBeaconSDK', :path => '../'
+
+  pod 'Masonry'
+  pod 'Toast'
+  pod 'MBProgressHUD'
+  pod 'MJRefresh'
+  pod 'YYKit'
+  pod 'UMengAnalytics'
+  pod 'iOSDFULibrary','4.6.1'
+  
+end

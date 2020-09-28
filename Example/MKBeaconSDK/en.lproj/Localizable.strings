@@ -1,0 +1,139 @@
+
+/*HCKScanViewController国际化*/
+"HCKScanViewController_title" = "Devices";
+"HCKScanViewController_alertTitle" = "Please enter password";
+"HCKScanViewController_cancel" = "Cancel";
+"HCKScanViewController_ok" = "OK";
+"HCKScanViewController_errorMsg" = "Password cannot be empty";
+"HCKScanViewController_passwordError" = "Length should be 8 bits";
+"HCKScanViewController_placeHolder" = "Name";
+
+/*HCKConfigurationPageController国际化*/
+"HCKConfigurationPageController_title" = "Parameters";
+"HCKConfigurationPageController_disconnect" = "Device disconnect";
+"HCKConfigurationPageController_disable" = "Read only";
+"HCKConfigurationPageController_battery" = "Battery percentage";
+"HCKConfigurationPageController_uuid" = "UUID";
+"HCKConfigurationPageController_major" = "MAJOR";
+"HCKConfigurationPageController_minor" = "MINOR";
+"HCKConfigurationPageController_measure" = "RSSI@1m";
+"HCKConfigurationPageController_transmission" = "Transmission Power";
+"HCKConfigurationPageController_broadcastInterval" = "Broadcasting Interval";
+"HCKConfigurationPageController_deviceID" = "Device ID";
+"HCKConfigurationPageController_mac" = "MAC Address";
+"HCKConfigurationPageController_beaconName" = "iBeacon Name";
+"HCKConfigurationPageController_connectStatus" = "Connectable";
+"HCKConfigurationPageController_changePassword" = "Modify Password";
+"HCKConfigurationPageController_system" = "Device Information";
+"HCKConfigurationPageController_rssi" = "RSSI curve";
+"HCKConfigurationPageController_xyz" = "3-Axis Accelerometer";
+"HCKConfigurationPageController_disconnected" = "The device is disconnected. Please click the “CONNECT” on the top to reconnect.";
+"HCKConfigurationPageController_powerOff" = "Power off";
+
+/*HCKSystemController国际化*/
+"HCKSystemController_title" = "Device Information";
+"HCKSystemController_manufacturers" = "Manufacture";
+"HCKSystemController_mode" = "Product Model";
+"HCKSystemController_production" = "Production Date";
+"HCKSystemController_mac" = "MAC Address";
+"HCKSystemController_hardwareModule" = "Chip Model";
+"HCKSystemController_hardware" = "Hardware Version";
+"HCKSystemController_firmware" = "Firmware Version";
+"HCKSystemController_softVersion" = "Software Version";
+"HCKSystemController_elapsedTime" = "Running Time";
+"HCKSystemController_system" = "System ID";
+"HCKSystemController_ieee" = "IEEE";
+
+/*HCKAboutController国际化*/
+"HCKAboutController_title" = "About us";
+"HCKAboutController_version" = "Version:";
+"HCKAboutController_companyInfo" = "Moko Technology Ltd.";
+
+/*HCKSetUUIDController国际化*/
+"HCKSetUUIDController_wechat" = "WeChat";
+
+/*HCKSetMeasurePowerController国际化*/
+"HCKSetMeasurePowerController_note" = "Tip:Input range:-120-0. After modifying the parameter, click the upper right button to save.";
+"HCKSetMeasurePowerController_title" = "RSSI@1m";
+"HCKSetMeasurePowerController_error" = "Reasonable range of -120~0.";
+"HCKSetMeasurePowerController_error1" = "To modify the value cannot be empty.";
+
+/*HCKSetBeaconNameController国际化*/
+"HCKSetBeaconNameController_title" = "iBeacon Name";
+"HCKSetBeaconNameController_note" = "Tip:Up to 10 characters can be entered. After modifying the parameter, click the upper right button to save.";
+"HCKSetBeaconNameController_xzyNot" = "Tip:Up to 4 characters can be entered. After modifying the parameter, click the upper right button to save.";
+"HCKSetBeaconNameController_error" = "To modify the name cannot be empty.";
+
+/*HCKSetDeviceIDController国际化*/
+"HCKSetDeviceIDController_note" = "Tip:Input range:0-99999. After modifying the parameter, click the upper right button to save.";
+"HCKSetDeviceIDController_title" = "Device ID";
+"HCKSetDeviceIDController_error" = "To modify the device ID can not be empty.";
+
+/*HCKSetBeaconValueViewController国际化*/
+"HCKSetBeaconValueViewController_decimal" = "Decimal";
+"HCKSetBeaconValueViewController_hex1" = "Hex(0x)";
+"HCKSetBeaconValueViewController_hex2" = "Hex";
+"HCKSetBeaconValueViewController_note" = "Tip:Input range:0-65535. After modifying the parameter, click the upper right button to save.";
+"HCKSetBeaconValueViewController_error" = "To modify the value cannot be empty.";
+"HCKSetBeaconValueViewController_scopeError" = "Reasonable range of 0-65535.";
+
+/*HCKSetTransmissionController国际化*/
+"HCKSetTransmissionController_title" = "Transmission Power";
+"HCKSetTransmissionController_modelTitle1" = "Highest";
+"HCKSetTransmissionController_modelValue1" = "power:4dBm";
+"HCKSetTransmissionController_modelRadius1" = "radius:90m";
+"HCKSetTransmissionController_modelTitle2" = "1";
+"HCKSetTransmissionController_modelValue2" = "power:0dBm";
+"HCKSetTransmissionController_modelRadius2" = "radius:50m";
+"HCKSetTransmissionController_modelTitle3" = "2";
+"HCKSetTransmissionController_modelValue3" = "power:-4dBm";
+"HCKSetTransmissionController_modelRadius3" = "radius:27m";
+"HCKSetTransmissionController_modelTitle4" = "3";
+"HCKSetTransmissionController_modelValue4" = "power:-8dBm";
+"HCKSetTransmissionController_modelRadius4" = "radius:22m";
+"HCKSetTransmissionController_modelTitle5" = "4";
+"HCKSetTransmissionController_modelValue5" = "power:-12dBm";
+"HCKSetTransmissionController_modelRadius5" = "radius:15m";
+"HCKSetTransmissionController_modelTitle6" = "5";
+"HCKSetTransmissionController_modelValue6" = "power:-16dBm";
+"HCKSetTransmissionController_modelRadius6" = "radius:10m";
+"HCKSetTransmissionController_modelTitle7" = "6";
+"HCKSetTransmissionController_modelValue7" = "power:-20dBm";
+"HCKSetTransmissionController_modelRadius7" = "radius:7m";
+"HCKSetTransmissionController_modelTitle8" = "7";
+"HCKSetTransmissionController_modelValue8" = "power:-30dBm";
+"HCKSetTransmissionController_modelRadius8" = "radius:2m";
+"HCKSetTransmissionController_modelTitle9" = "8";
+"HCKSetTransmissionController_modelValue9" = "power:-40dBm";
+"HCKSetTransmissionController_modelRadius9" = "radius:1m";
+
+/*HCKSetBroadcastCycleController国际化*/
+"HCKSetBroadcastCycleController_title" = "Broadcasting Interval";
+"HCKSetBroadcastCycleController_error" = "To modify the value cannot be empty.";
+"HCKSetBroadcastCycleController_rangeError" = "Reasonable range of 1~100";
+
+/*HCKSetConnectModeController国际化*/
+"HCKSetConnectModeController_title" = "Connectable";
+"HCKSetConnectModeController_note" = "Tip:YES:iBeacon is connectable.NO:iBeacon isn't connectable";
+
+/*HCKSetPasswordController国际化*/
+"HCKSetPasswordController_title" = "Modify Password";
+"HCKSetPasswordController_msg1" = "New Password";
+"HCKSetPasswordController_msg2" = "New Password";
+"HCKSetPasswordController_msg3" = "New Password";
+"HCKSetPasswordController_msg4" = "New Password";
+"HCKSetPasswordController_note" = "Tip:Password must be 8 characters. After modifying the parameter, click the upper right button to save.";
+
+/*HCKCollectionFooterView国际化*/
+"HCKCollectionFooterView_msg" = "Tips:The higher power,the greater signal coverage,but power consumption is higher,After modifying the parameter, click the upper right button to save.";
+
+/*HCKCollectionHeaderView国际化*/
+"HCKCollectionHeaderView_msg" = "Please Select";
+
+/*HCKBroadcastCycleFooterView国际化*/
+"HCKBroadcastCycleFooterView_msg1" = "Input:";
+"HCKBroadcastCycleFooterView_unit" = "units:100ms";
+"HCKBroadcastCycleFooterView_note" = "Tip:iBeacon is easy to be scanned and connected if the broadcast time is short,but power consumption is also higher.Reasonable range of 1~100.After modifying the parameter, click the upper right button to save.";
+
+/*HCKHomeDataManager国际化*/
+"HCKHomeDataManager_error" = "Read data error";

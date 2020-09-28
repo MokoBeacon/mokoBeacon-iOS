@@ -1,0 +1,147 @@
+
+/*HCKScanViewController国际化*/
+"HCKScanViewController_title" = "设备列表";
+"HCKScanViewController_alertTitle" = "请输入连接密码";
+"HCKScanViewController_cancel" = "取消";
+"HCKScanViewController_ok" = "确定";
+"HCKScanViewController_errorMsg" = "密码不能为空";
+"HCKScanViewController_passwordError" = "密码长度8位";
+"HCKScanViewController_placeHolder" = "名称";
+
+/*HCKConfigurationPageController国际化*/
+"HCKConfigurationPageController_title" = "详细信息";
+"HCKConfigurationPageController_disconnect" = "设备断开连接";
+"HCKConfigurationPageController_disable" = "不可修改";
+"HCKConfigurationPageController_battery" = "设备电量";
+"HCKConfigurationPageController_uuid" = "UUID";
+"HCKConfigurationPageController_major" = "MAJOR";
+"HCKConfigurationPageController_minor" = "MINOR";
+"HCKConfigurationPageController_measure" = "校验距离(RSSI@1m)";
+"HCKConfigurationPageController_transmission" = "广播功率";
+"HCKConfigurationPageController_broadcastInterval" = "广播周期";
+"HCKConfigurationPageController_deviceID" = "设备ID";
+"HCKConfigurationPageController_mac" = "MAC地址";
+"HCKConfigurationPageController_beaconName" = "设备名称";
+"HCKConfigurationPageController_connectStatus" = "连接状态";
+"HCKConfigurationPageController_changePassword" = "修改密码";
+"HCKConfigurationPageController_system" = "系统信息";
+"HCKConfigurationPageController_rssi" = "RSSI曲线";
+"HCKConfigurationPageController_xyz" = "加速度计采样数据";
+"HCKConfigurationPageController_disconnected" = "设备连接断开。请点击右上角“CONNECT”按钮重新连接。";
+"HCKConfigurationPageController_powerOff" = "关机";
+"HCKConfigurationPageController_watchout" = "注意!";
+"HCKConfigurationPageController_powerOffNote" = "请确保被关机的设备带有按键。否则设备可能无法重新开机！";
+"HCKConfigurationPageController_confirm" = "确定";
+"HCKConfigurationPageController_cancel" = "取消";
+"HCKConfigurationPageController_connectEnableMsg" = "确定设置为可连接状态?";
+"HCKConfigurationPageController_connectDisableMsg" = "确定设置为不可连接状态?";
+
+/*HCKSystemController国际化*/
+"HCKSystemController_title" = "系统信息";
+"HCKSystemController_manufacturers" = "制造商";
+"HCKSystemController_mode" = "产品型号";
+"HCKSystemController_production" = "生产日期";
+"HCKSystemController_mac" = "MAC地址";
+"HCKSystemController_hardwareModule" = "芯片型号";
+"HCKSystemController_hardware" = "硬件版本";
+"HCKSystemController_firmware" = "固件版本";
+"HCKSystemController_softVersion" = "软件版本";
+"HCKSystemController_elapsedTime" = "运行时间";
+"HCKSystemController_system" = "系统标示";
+"HCKSystemController_ieee" = "IEEE标准信息";
+
+/*HCKAboutController国际化*/
+"HCKAboutController_title" = "关于我们";
+"HCKAboutController_version" = "版本号：";
+"HCKAboutController_companyInfo" = "深圳市华创恒达科技有限公司";
+
+/*HCKSetUUIDController国际化*/
+"HCKSetUUIDController_wechat" = "微信";
+
+/*HCKSetMeasurePowerController国际化*/
+"HCKSetMeasurePowerController_note" = "注：输入范围：-120-0。修改参数后，点击右上保存按钮进行保存。";
+"HCKSetMeasurePowerController_title" = "校验距离(RSSI@1m)";
+"HCKSetMeasurePowerController_error" = "合理范围为-120~0";
+"HCKSetMeasurePowerController_error1" = "要修改的值不能为空";
+
+/*HCKSetBeaconNameController国际化*/
+"HCKSetBeaconNameController_title" = "设备名称";
+"HCKSetBeaconNameController_note" = "注：最大输入10个字符。修改参数后，点击右上保存按钮进行保存。";
+"HCKSetBeaconNameController_xzyNot" = "注：最大输入4个字符。修改参数后，点击右上保存按钮进行保存。";
+"HCKSetBeaconNameController_error" = "要修改的名称不能为空";
+
+/*HCKSetDeviceIDController国际化*/
+"HCKSetDeviceIDController_note" = "注：输入范围：0-99999。修改参数后，点击右上保存按钮进行保存。";
+"HCKSetDeviceIDController_title" = "设备ID";
+"HCKSetDeviceIDController_error" = "要修改的设备ID不能为空";
+
+/*HCKSetBeaconValueViewController国际化*/
+"HCKSetBeaconValueViewController_decimal" = "十进制";
+"HCKSetBeaconValueViewController_hex1" = "十六进制(0x)";
+"HCKSetBeaconValueViewController_hex2" = "十六进制";
+"HCKSetBeaconValueViewController_note" = "注：输入范围：0-65535。修改参数后，点击右上保存按钮进行保存。";
+"HCKSetBeaconValueViewController_error" = "要修改的值不能为空";
+"HCKSetBeaconValueViewController_scopeError" = "合理范围为0-65535";
+
+/*HCKSetTransmissionController国际化*/
+"HCKSetTransmissionController_title" = "广播功率";
+"HCKSetTransmissionController_modelTitle1" = "最高档";
+"HCKSetTransmissionController_modelValue1" = "功率：4dBm";
+"HCKSetTransmissionController_modelRadius1" = "半径：约90米";
+"HCKSetTransmissionController_modelTitle2" = "1档";
+"HCKSetTransmissionController_modelValue2" = "功率：0dBm";
+"HCKSetTransmissionController_modelRadius2" = "半径：约50米";
+"HCKSetTransmissionController_modelTitle3" = "2档";
+"HCKSetTransmissionController_modelValue3" = "功率：-4dBm";
+"HCKSetTransmissionController_modelRadius3" = "半径：约27米";
+"HCKSetTransmissionController_modelTitle4" = "3档";
+"HCKSetTransmissionController_modelValue4" = "功率：-8dBm";
+"HCKSetTransmissionController_modelRadius4" = "半径：约22米";
+"HCKSetTransmissionController_modelTitle5" = "4档";
+"HCKSetTransmissionController_modelValue5" = "功率：-12dBm";
+"HCKSetTransmissionController_modelRadius5" = "半径：约15米";
+"HCKSetTransmissionController_modelTitle6" = "5档";
+"HCKSetTransmissionController_modelValue6" = "功率：-16dBm";
+"HCKSetTransmissionController_modelRadius6" = "半径：约10米";
+"HCKSetTransmissionController_modelTitle7" = "6档";
+"HCKSetTransmissionController_modelValue7" = "功率：-20dBm";
+"HCKSetTransmissionController_modelRadius7" = "半径：约7米";
+"HCKSetTransmissionController_modelTitle8" = "7档";
+"HCKSetTransmissionController_modelValue8" = "功率：-30dBm";
+"HCKSetTransmissionController_modelRadius8" = "半径：约2米";
+"HCKSetTransmissionController_modelTitle9" = "8档";
+"HCKSetTransmissionController_modelValue9" = "功率：-40dBm";
+"HCKSetTransmissionController_modelRadius9" = "半径：约1米";
+
+/*HCKSetBroadcastCycleController国际化*/
+"HCKSetBroadcastCycleController_title" = "广播周期";
+"HCKSetBroadcastCycleController_error" = "要修改的值不能为空";
+"HCKSetBroadcastCycleController_rangeError" = "合理范围为1~100";
+
+/*HCKSetConnectModeController国际化*/
+"HCKSetConnectModeController_title" = "连接模式";
+"HCKSetConnectModeController_note" = "注：YES代表手机可以与iBeacon连接。NO代表手机不能与iBeacon连接。正常情况下不能去修改这个值，修改参数后，重连后生效。";
+
+/*HCKSetPasswordController国际化*/
+"HCKSetPasswordController_title" = "修改密码";
+"HCKSetPasswordController_msg1" = "请输入新密码";
+"HCKSetPasswordController_msg2" = "输入密码";
+"HCKSetPasswordController_msg3" = "再次输入新密码";
+"HCKSetPasswordController_msg4" = "请再次输入密码";
+"HCKSetPasswordController_note" = "注：密码必须为8个字符。修改参数后，点击右上保存按钮进行保存。";
+
+/*HCKCollectionFooterView国际化*/
+"HCKCollectionFooterView_msg" = "提示：广播功率设置越高，信号覆盖范围越大，耗电量也越大，修改参数后，点击右上保存按钮进行保存。";
+
+/*HCKCollectionHeaderView国际化*/
+"HCKCollectionHeaderView_msg" = "请选择档位";
+
+/*HCKBroadcastCycleFooterView国际化*/
+"HCKBroadcastCycleFooterView_msg1" = "输入：";
+"HCKBroadcastCycleFooterView_unit" = "单位：100ms";
+"HCKBroadcastCycleFooterView_note" = "提示：数值输入范围1-100，广播间隔越小，iBeacon广播速度越快，更容易被扫描和连接，耗电量也越大，修改参数后，点击右上保存按钮进行保存。";
+
+/*HCKHomeDataManager国际化*/
+"HCKHomeDataManager_error" = "数据读取错误";
+
+

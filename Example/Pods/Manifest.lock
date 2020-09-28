@@ -1,0 +1,53 @@
+PODS:
+  - iOSDFULibrary (4.6.1):
+    - ZIPFoundation (= 0.9.9)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - MKBeaconSDK (1.1.0)
+  - Toast (4.0.0)
+  - UMengAnalytics (4.2.4)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZIPFoundation (0.9.9)
+
+DEPENDENCIES:
+  - iOSDFULibrary (= 4.6.1)
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - MKBeaconSDK (from `../`)
+  - Toast
+  - UMengAnalytics
+  - YYKit
+
+SPEC REPOS:
+  trunk:
+    - iOSDFULibrary
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - Toast
+    - UMengAnalytics
+    - YYKit
+    - ZIPFoundation
+
+EXTERNAL SOURCES:
+  MKBeaconSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  iOSDFULibrary: 3053cf01eaabec37dc7372fb77ae4a218b577c55
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  MKBeaconSDK: 64e9355ca49e72495f977015102c242bb6f543d6
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZIPFoundation: 89df685c971926b0323087952320bdfee9f0b6ef
+
+PODFILE CHECKSUM: 66353db7f759aa2cd89bc4a5851bb1d10aaeafea
+
+COCOAPODS: 1.8.4
