@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MKBeaconSDK'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'moko iBeacon SDK'
 
 # This description is used to generate tags and improve search results.
